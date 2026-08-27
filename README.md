@@ -1,7 +1,7 @@
-# Wisernage shop
+# Wisernage
 
-Public catalog. Gumroad is checkout only.
+Small tools you buy once. n8n packs, a Chrome table grabber, job-hunt kits, a skill generator, and a kiln idle.
 
-Live at https://grok-bot-army.github.io/shop/
+**Shop:** https://grok-bot-army.github.io/shop/
 
-Do not put zips, tokens, or private READMEs in this repo.
+Checkout is Gumroad. You get a zip on your receipt.
