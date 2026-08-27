@@ -1,6 +1,6 @@
 # Wisernage
 
-Small tools you buy once. n8n packs, a Chrome table grabber, job-hunt kits, a skill generator, and a kiln idle.
+Small tools you buy once. n8n packs, a Chrome table grabber, job-hunt kits, and a skill generator.
 
 **Shop:** https://grok-bot-army.github.io/shop/
 
