@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>n8n invoice Gmail to Sheets vs lead webhook to Sheets | Wisernage</title>
+<meta name="description" content="Compare n8n Invoice Inbox (Gmail invoice PDFs to Google Sheets), Receipt Inbox, and Lead Intake (Typeform, Tally, Fillout webhook to Sheets). None pay a vendor or email a lead.">
+<meta property="og:title" content="n8n invoice Gmail to Sheets vs lead webhook to Sheets">
+<meta property="og:description" content="Pick the n8n pack: Gmail invoice PDFs, Gmail receipts, or a form webhook. Then add Fail Alert and Never Auto-Pay.">
+<meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/invoice.jpg">
+<meta property="og:url" content="https://grok-bot-army.github.io/shop/n8n-gmail-sheets.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wisernage">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="n8n invoice Gmail to Sheets vs lead webhook to Sheets">
+<meta name="twitter:description" content="Pick the n8n pack: Gmail invoice PDFs, Gmail receipts, or a form webhook. Then add Fail Alert and Never Auto-Pay.">
+<meta name="twitter:image" content="https://grok-bot-army.github.io/shop/images/web/invoice.jpg">
+<link rel="canonical" href="https://grok-bot-army.github.io/shop/n8n-gmail-sheets.html">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "n8n invoice Gmail to Sheets vs lead webhook to Sheets",
+  "description": "Compare n8n Invoice Inbox (Gmail invoice PDFs to Google Sheets), Receipt Inbox, and Lead Intake (Typeform, Tally, Fillout webhook to Sheets).",
+  "image": "https://grok-bot-army.github.io/shop/images/web/invoice.jpg",
+  "author": {"@type": "Organization", "name": "Wisernage", "url": "https://grok-bot-army.github.io/shop/"},
+  "publisher": {"@type": "Organization", "name": "Wisernage", "url": "https://grok-bot-army.github.io/shop/"},
+  "mainEntityOfPage": "https://grok-bot-army.github.io/shop/n8n-gmail-sheets.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I send n8n invoice Gmail PDFs to Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Invoice Inbox. Two n8n workflows poll Gmail for vendor invoice PDFs, extract vendor, amount, and due date with regex, and append one Google Sheets row each. Status is logged. Nobody gets paid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I send an n8n lead intake webhook to Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Lead Intake. One POST webhook flattens Typeform, Tally, Fillout, or generic JSON into one Google Sheets lead row. It never emails the lead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Invoice Inbox and Receipt Inbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Invoice Inbox logs vendor bills you owe (invoices in Gmail). Receipt Inbox logs receipts you already paid (SaaS and vendor receipt PDFs). Both write Sheets. Neither pays anyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do these n8n packs auto-pay vendors or email leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Invoice Inbox and Receipt Inbox never pay a vendor. Lead Intake never emails the lead. Never Auto-Pay is a $9 checklist if you want that rule on paper first."
+      }
+    }
+  ]
+}
+</script>
+<body>
+<header class="site wrap">
+  <a class="mark" href="index.html">Wisernage</a>
+  <nav>
+    <a href="index.html#catalog">Products</a>
+    <a href="n8n-gmail-sheets.html">Guide</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+<main class="product wrap">
+  <div class="kicker">Evergreen guide</div>
+  <h1>n8n invoice Gmail to Sheets, or a lead webhook to Sheets?</h1>
+  <p class="sub">Two jobs show up in freelancer n8n setups. Vendor invoice PDFs in Gmail need a log. Form tools need one lead row. This page picks the pack. None of them pay a vendor or email a lead.</p>
+  <div class="actions"><a class="btn" href="invoice-inbox.html">Invoice Inbox</a> <a class="btn ghost" href="lead-intake.html">Lead Intake</a></div>
+  <div class="prose">
+    <h2>The short answer</h2>
+    <p>If the file is a vendor invoice PDF in Gmail, use <a href="invoice-inbox.html">Invoice Inbox</a>. If the file is a receipt you already paid, use <a href="receipt-inbox.html">Receipt Inbox</a>. If a form posts JSON (Typeform, Tally, Fillout, or a random webhook), use <a href="lead-intake.html">Lead Intake</a>.</p>
+    <p>Add <a href="n8n-fail-alert.html">n8n Fail Alert</a> when you will not watch the Executions tab. Read <a href="never-auto-pay.html">Never Auto-Pay</a> if you want the never-pays rule on paper before you import a workflow.</p>
+
+    <h2>n8n invoice Gmail to Google Sheets</h2>
+    <p>Invoice Inbox is an n8n invoice workflow for vendor PDFs sitting in Gmail. It polls Gmail, reads vendor, amount, and due date with regex on the PDF text, and writes one Google Sheets row. Below 70 confidence, status is needs_review and Slack gets a ping.</p>
+    <p>That is the whole job: Gmail invoice PDF to Google Sheets. A log of what arrived. Not a robot that pays it. It never talks to a bank, never creates a bill, never emails the vendor.</p>
+    <p><a href="invoice-inbox.html">Invoice Inbox product page</a> (import two workflows, $49).</p>
+
+    <h2>n8n lead intake webhook to Sheets</h2>
+    <p>Lead Intake is one POST webhook. Point Typeform, a Tally form webhook, Fillout, or generic JSON at it. The pack flattens the payload to one canonical lead row in Google Sheets. HubSpot or Pipedrive upsert is optional.</p>
+    <p>It never emails the lead. There is no welcome sequence in the pack. If the webhook 404s or Sheets stays empty, the <a href="n8n-webhook-debug-checklist.html">n8n Webhook Debug Checklist</a> walks Test vs Production URL, payload shape, and the Sheets append gate.</p>
+    <p><a href="lead-intake.html">Lead Intake product page</a> (one webhook, $39).</p>
+
+    <h2>Receipts in Gmail (not invoices)</h2>
+    <p>Receipt Inbox uses the same Gmail-to-Sheets idea for SaaS and vendor receipt PDFs. It writes merchant, amount, and date, stores the PDF in Drive, and still never pays anyone. Invoice Inbox logs bills you owe. This logs receipts you bought.</p>
+    <p><a href="receipt-inbox.html">Receipt Inbox product page</a> ($39).</p>
+
+    <h2>Which pack for which job</h2>
+    <table class="compare">
+      <thead>
+        <tr>
+          <th>Job</th>
+          <th>Pack</th>
+          <th>Writes</th>
+          <th>Never does</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>n8n invoice Gmail to Sheets (vendor PDFs)</td>
+          <td><a href="invoice-inbox.html">Invoice Inbox</a></td>
+          <td>Vendor, amount, due date</td>
+          <td>Pay a vendor, talk to a bank</td>
+        </tr>
+        <tr>
+          <td>Gmail receipt PDFs to Sheets</td>
+          <td><a href="receipt-inbox.html">Receipt Inbox</a></td>
+          <td>Merchant, amount, date, Drive file</td>
+          <td>Pay anyone, email the merchant</td>
+        </tr>
+        <tr>
+          <td>n8n lead intake webhook to Sheets</td>
+          <td><a href="lead-intake.html">Lead Intake</a></td>
+          <td>One flattened lead row</td>
+          <td>Email the lead</td>
+        </tr>
+        <tr>
+          <td>Know when a run fails</td>
+          <td><a href="n8n-fail-alert.html">n8n Fail Alert</a></td>
+          <td>One Slack or Telegram alert</td>
+          <td>Spam, retry loops, pay anyone</td>
+        </tr>
+        <tr>
+          <td>Write the never-pay rule down first</td>
+          <td><a href="never-auto-pay.html">Never Auto-Pay</a></td>
+          <td>Checklist plus Invoice Log headers</td>
+          <td>Run a workflow (it is not JSON)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Safety layer (before or after import)</h2>
+    <p>Never Auto-Pay is a $9 checklist pack, not a workflow. Credential gates for Gmail, Sheets, and Slack. Same Invoice Log CSV headers as Invoice Inbox. Use it if you want the rule "logged is not paid" before you turn anything on.</p>
+    <p><a href="never-auto-pay.html">Never Auto-Pay product page</a>.</p>
+
+    <h2>When the workflow fails</h2>
+    <p>n8n Fail Alert is one Error Trigger workflow. Failed runs post once to Slack (Telegram optional) with the workflow name, last node, error text, and execution URL. Never-spam. Pair it with Invoice Inbox, Receipt Inbox, or Lead Intake so a dead poll or a bad webhook is not silent.</p>
+    <p><a href="n8n-fail-alert.html">n8n Fail Alert product page</a> ($19).</p>
+
+    <h2>How to choose in one pass</h2>
+    <ol>
+      <li>Vendor bills in Gmail: <a href="invoice-inbox.html">Invoice Inbox</a>.</li>
+      <li>SaaS or vendor receipts in Gmail: <a href="receipt-inbox.html">Receipt Inbox</a>.</li>
+      <li>Forms dumping JSON at a webhook: <a href="lead-intake.html">Lead Intake</a>.</li>
+      <li>Want the never-pay rule on paper first: <a href="never-auto-pay.html">Never Auto-Pay</a>.</li>
+      <li>Already running a pack and missing failures: <a href="n8n-fail-alert.html">n8n Fail Alert</a>.</li>
+    </ol>
+
+    <h2>Questions</h2>
+    <h3>How do I send n8n invoice Gmail PDFs to Google Sheets?</h3>
+    <p>Use Invoice Inbox. Two n8n workflows poll Gmail for vendor invoice PDFs, extract vendor, amount, and due date with regex, and append one Google Sheets row each. Status is logged. Nobody gets paid.</p>
+    <h3>How do I send an n8n lead intake webhook to Sheets?</h3>
+    <p>Use Lead Intake. One POST webhook flattens Typeform, Tally, Fillout, or generic JSON into one Google Sheets lead row. It never emails the lead.</p>
+    <h3>What is the difference between Invoice Inbox and Receipt Inbox?</h3>
+    <p>Invoice Inbox logs vendor bills you owe (invoices in Gmail). Receipt Inbox logs receipts you already paid (SaaS and vendor receipt PDFs). Both write Sheets. Neither pays anyone.</p>
+    <h3>Do these n8n packs auto-pay vendors or email leads?</h3>
+    <p>No. Invoice Inbox and Receipt Inbox never pay a vendor. Lead Intake never emails the lead. Never Auto-Pay is a $9 checklist if you want that rule on paper first.</p>
+    <p class="note">Checkout is Gumroad. The zip is on your receipt. See <a href="delivery.html">how delivery works</a>. No one at Wisernage has to send you a file.</p>
+  </div>
+  <nav class="related" aria-label="Related products">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="invoice-inbox.html">Invoice Inbox <span class="hint">Gmail invoice PDFs to Sheets. Never paid.</span></a></li>
+      <li><a href="lead-intake.html">Lead Intake <span class="hint">Form webhook flatten to one lead row.</span></a></li>
+      <li><a href="receipt-inbox.html">Receipt Inbox <span class="hint">Gmail receipt PDFs to Sheets. Never paid.</span></a></li>
+      <li><a href="n8n-fail-alert.html">n8n Fail Alert <span class="hint">One Slack ping when a run fails.</span></a></li>
+      <li><a href="never-auto-pay.html">Never Auto-Pay <span class="hint">$9 checklist. Not a workflow.</span></a></li>
+      <li><a href="index.html">Shop home</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    One payment. A zip on your receipt. Yours to keep.
+    <div style="margin-top:10px"><a href="about.html">About</a> · <a href="delivery.html">Delivery</a> · <a href="n8n-gmail-sheets.html">Guide</a> · <a href="https://wisernage.gumroad.com">Your purchases</a></div>
+  </div>
+</footer>
+</body>
+</html>
