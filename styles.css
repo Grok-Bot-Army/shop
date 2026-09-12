@@ -165,7 +165,40 @@ footer.site a { color: var(--ink); }
 }
 .upsell p { margin: 0 0 12px; }
 .upsell p:last-child { margin-bottom: 0; }
-@media (max-width: 640px) {
+.related {
+  margin: 40px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  max-width: 62ch;
+}
+.related h2 { font-size: 20px; margin: 0 0 10px; }
+.related ul { list-style: none; padding: 0; margin: 0; }
+.related li { border-top: 1px solid var(--line); }
+.related li:first-child { border-top: 0; }
+.related a { display: block; padding: 10px 0; text-decoration: none; }
+.related a:hover { color: var(--ember); }
+.related .hint { display: block; color: var(--muted); font-size: 14px; font-weight: 400; }
+.compare { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0 20px; }
+.compare th, .compare td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+.compare th {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.guide-callout {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 22px 22px 24px;
+  margin: 0 0 48px;
+}
+.guide-callout h2 { margin: 0 0 8px; font-size: 22px; }
+.guide-callout p { margin: 0 0 14px; color: var(--muted); max-width: 56ch; }
+.guide-callout .actions { margin: 0; }
+@media (max-width: 720px) {
+  nav { display: flex; flex-wrap: wrap; justify-content: flex-end; row-gap: 6px; }
   nav a { margin-left: 12px; }
   .hero { padding-top: 36px; }
+  .compare { display: block; overflow-x: auto; }
 }

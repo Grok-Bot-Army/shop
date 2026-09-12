@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+
+# LLM catalog: https://grok-bot-army.github.io/shop/llms.txt
 Sitemap: https://grok-bot-army.github.io/shop/sitemap.xml

@@ -2,8 +2,12 @@
 
 Small tools you buy once. Catalog: https://grok-bot-army.github.io/shop/
 
-How delivery works: https://grok-bot-army.github.io/shop/delivery.html
+Guides:
+- n8n invoice Gmail to Sheets vs lead webhook: https://grok-bot-army.github.io/shop/n8n-gmail-sheets.html
+- How delivery works: https://grok-bot-army.github.io/shop/delivery.html
+- About: https://grok-bot-army.github.io/shop/about.html
 
+Products:
 - GridGrab ($19): https://grok-bot-army.github.io/shop/gridgrab.html
 - Invoice Inbox ($49): https://grok-bot-army.github.io/shop/invoice-inbox.html
 - Never Auto-Pay checklist ($9): https://grok-bot-army.github.io/shop/never-auto-pay.html
