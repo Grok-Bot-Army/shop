@@ -152,6 +152,19 @@ footer.site a { color: var(--ink); }
   padding: 12px 14px;
   font-size: 15px;
 }
+.upsell {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 18px 18px 20px;
+  margin: 28px 0 8px;
+  max-width: 62ch;
+}
+.upsell h2 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+.upsell p { margin: 0 0 12px; }
+.upsell p:last-child { margin-bottom: 0; }
 @media (max-width: 640px) {
   nav a { margin-left: 12px; }
   .hero { padding-top: 36px; }
