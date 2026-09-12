@@ -2,14 +2,14 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Invoice Inbox — Wisernage</title>
-<meta name="description" content="Stop letting vendor invoices rot in Gmail. One Sheets row each. The workflow never pays.">
-<meta property="og:title" content="Vendor PDFs in Gmail, one row in Sheets. Never paid.">
-<meta property="og:description" content="Vendor PDFs in Gmail become one Sheets row. It never pays anyone.">
+<title>Invoice Inbox — Gmail invoice PDFs to Google Sheets with n8n | Wisernage</title>
+<meta name="description" content="n8n pack that polls Gmail for invoice PDFs and writes vendor, amount, and due date to Google Sheets. Regex on the PDF by default. Never pays anyone. $49.">
+<meta property="og:title" content="Invoice Inbox — Gmail invoice PDFs to Google Sheets with n8n">
+<meta property="og:description" content="n8n workflows poll Gmail for invoice PDFs and log one Google Sheets row each. Status is logged, never paid.">
 <meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/invoice.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/invoice-inbox.html">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Invoice Inbox", "description": "Vendor PDFs in Gmail become one Sheets row. It never pays anyone.", "image": "https://grok-bot-army.github.io/shop/images/web/invoice.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "49", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/kqcpea"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Invoice Inbox", "description": "n8n pack that polls Gmail for invoice PDFs and writes vendor, amount, and due date to Google Sheets. Regex on the PDF by default. Never pays anyone.", "image": "https://grok-bot-army.github.io/shop/images/web/invoice.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "49", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/kqcpea"}}</script>
 <body>
 <header class="site wrap">
   <a class="mark" href="index.html">Wisernage</a>
@@ -27,6 +27,8 @@
   <div class="prose">
     <h2>Who it is for</h2>
     <p>Freelancers and tiny agencies who live in Gmail and Sheets, not AP software.</p>
+    <h2>Gmail invoice PDFs to Google Sheets with n8n</h2>
+    <p>Import two n8n workflows. They poll Gmail for PDF invoices, extract vendor, amount, and due date with regex on the PDF text, and append one row in Google Sheets. Below 70 confidence, status is needs_review and Slack gets a ping. The pack never pays a vendor or talks to a bank.</p>
     <h2>How to start</h2>
     <p>Import the two workflows. Connect Gmail, Sheets, and Slack. Turn them on.</p>
     <h2>What you get</h2>
