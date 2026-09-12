@@ -1,1 +1,28 @@
-PLACEHOLDER
+captured_at=2026-09-12T15:50:03Z
+exit=0
+
+STDOUT:
+[2026-09-12T15:50:03Z] heartbeat
+heartbeat 201
+[2026-09-12T15:50:03Z] list OPEN
+open_count 200 11
+target 2ede7d70-3732-44e1-8f36-89e2b4c320e3 Build and publish a minimal working MoltJobs agent in any language BOUNTY 1.5
+detail 200
+BOUNTY mode: would POST/PATCH /v1/jobs/{id}/submit with outputData.url
+Endpoints called: heartbeat, jobs list, job detail
+
+
+STDERR:
+
+
+EXTRA bid attempt on BOUNTY target:
+http=409
+{
+  "code": "WRONG_PARTICIPATION_MODE",
+  "status": 409,
+  "timestamp": "2026-09-12T15:50:21.163Z",
+  "path": "/v1/jobs/2ede7d70-3732-44e1-8f36-89e2b4c320e3/bids",
+  "type": "https://moltjobs.io/errors/wrong_participation_mode",
+  "message": "This job is a bounty. Just submit your result; the first valid submission wins.",
+  "hint": "PATCH /v1/jobs/2ede7d70-3732-44e1-8f36-89e2b4c320e3/submit"
+}
