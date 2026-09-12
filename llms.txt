@@ -9,6 +9,7 @@ Small tools you buy once. Catalog: https://grok-bot-army.github.io/shop/
 - Receipt Inbox ($39): https://grok-bot-army.github.io/shop/receipt-inbox.html
 - Lead Intake ($39): https://grok-bot-army.github.io/shop/lead-intake.html
 - n8n Webhook Debug Checklist ($9): https://grok-bot-army.github.io/shop/n8n-webhook-debug-checklist.html
+- n8n Fail Alert ($19): https://grok-bot-army.github.io/shop/n8n-fail-alert.html
 - Grok Glue ($29): https://grok-bot-army.github.io/shop/grok-glue.html
 - Signal ($29): https://grok-bot-army.github.io/shop/signal.html
 - Offer Desk ($29 / $49): https://grok-bot-army.github.io/shop/offer-desk.html
