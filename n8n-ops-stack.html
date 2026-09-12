@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>n8n Gmail to Sheets stack for invoices, receipts, leads | Wisernage</title>
+<meta name="description" content="Assemble an n8n Gmail to Sheets stack: Invoice Inbox, Receipt Inbox, Lead Intake, and Fail Alert. Logs only. Never pays a vendor or emails a lead.">
+<meta property="og:title" content="n8n Gmail to Sheets stack for invoices, receipts, leads">
+<meta property="og:description" content="Four packs. Gmail PDFs and form webhooks land in Sheets. Fail Alert pings Slack when a run dies.">
+<meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/invoice.jpg">
+<meta property="og:url" content="https://grok-bot-army.github.io/shop/n8n-ops-stack.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Wisernage">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="n8n Gmail to Sheets stack for invoices, receipts, leads">
+<meta name="twitter:description" content="Four packs. Gmail PDFs and form webhooks land in Sheets. Fail Alert pings Slack when a run dies.">
+<meta name="twitter:image" content="https://grok-bot-army.github.io/shop/images/web/invoice.jpg">
+<link rel="canonical" href="https://grok-bot-army.github.io/shop/n8n-ops-stack.html">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "n8n Gmail to Sheets stack for invoices, receipts, and leads",
+  "description": "Assemble Invoice Inbox, Receipt Inbox, Lead Intake, and Fail Alert. Logs only. Never pays a vendor or emails a lead.",
+  "image": "https://grok-bot-army.github.io/shop/images/web/invoice.jpg",
+  "author": {"@type": "Organization", "name": "Wisernage", "url": "https://grok-bot-army.github.io/shop/"},
+  "publisher": {"@type": "Organization", "name": "Wisernage", "url": "https://grok-bot-army.github.io/shop/"},
+  "mainEntityOfPage": "https://grok-bot-army.github.io/shop/n8n-ops-stack.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an n8n Gmail to Sheets stack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Invoice Inbox and Receipt Inbox poll Gmail PDFs into Google Sheets. Lead Intake flattens a form webhook into one lead row. Fail Alert posts once to Slack when any of those runs fail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this stack pay vendors or email leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Invoice Inbox and Receipt Inbox never pay anyone. Lead Intake never emails the lead. Fail Alert only pings your ops channel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need every pack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Start with the inbox that matches the file (invoices, receipts, or form webhooks). Add Fail Alert once something is live. Never Auto-Pay is optional paper before you import."
+      }
+    }
+  ]
+}
+</script>
+<body>
+<header class="site wrap">
+  <a class="mark" href="index.html">Wisernage</a>
+  <nav>
+    <a href="index.html#catalog">Products</a>
+    <a href="n8n-gmail-sheets.html">Guide</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+<main class="product wrap">
+  <div class="kicker">Evergreen guide</div>
+  <h1>An n8n Gmail to Sheets stack. Four packs. No auto-pay.</h1>
+  <p class="sub">Vendor invoices and receipts sit in Gmail. Leads arrive as webhooks. This stack logs them in Google Sheets and pings Slack when a run dies. Nobody gets paid. Nobody gets a surprise email.</p>
+  <div class="actions"><a class="btn" href="invoice-inbox.html">Invoice Inbox</a> <a class="btn ghost" href="receipt-inbox.html">Receipt Inbox</a> <a class="btn ghost" href="lead-intake.html">Lead Intake</a></div>
+  <div class="prose">
+    <h2>The stack</h2>
+    <ol>
+      <li><a href="invoice-inbox.html">Invoice Inbox</a> ($49). Polls Gmail for vendor invoice PDFs. Writes vendor, amount, and due date to Sheets. Status is logged, never paid.</li>
+      <li><a href="receipt-inbox.html">Receipt Inbox</a> ($39). Same Gmail-to-Sheets idea for receipts you already paid. Merchant, amount, date, plus the PDF in Drive.</li>
+      <li><a href="lead-intake.html">Lead Intake</a> ($39). One POST webhook. Typeform, Tally, Fillout, or generic JSON becomes one Sheets lead row. Never emails the lead.</li>
+      <li><a href="n8n-fail-alert.html">n8n Fail Alert</a> ($19). One Error Trigger workflow. A failed run posts once to Slack (Telegram optional) with the execution URL.</li>
+    </ol>
+    <p>That is the Gmail to Sheets n8n stack. Import what you need. Set Fail Alert on each live workflow so a dead poll is not silent.</p>
+
+    <h2>What each layer writes</h2>
+    <table class="compare">
+      <thead>
+        <tr>
+          <th>Layer</th>
+          <th>Input</th>
+          <th>Sheets row</th>
+          <th>Never does</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="invoice-inbox.html">Invoice Inbox</a></td>
+          <td>Gmail invoice PDFs</td>
+          <td>Vendor, amount, due date</td>
+          <td>Pay a vendor</td>
+        </tr>
+        <tr>
+          <td><a href="receipt-inbox.html">Receipt Inbox</a></td>
+          <td>Gmail receipt PDFs</td>
+          <td>Merchant, amount, date</td>
+          <td>Pay anyone</td>
+        </tr>
+        <tr>
+          <td><a href="lead-intake.html">Lead Intake</a></td>
+          <td>Form webhook JSON</td>
+          <td>One flattened lead</td>
+          <td>Email the lead</td>
+        </tr>
+        <tr>
+          <td><a href="n8n-fail-alert.html">Fail Alert</a></td>
+          <td>Failed n8n execution</td>
+          <td>(Slack or Telegram)</td>
+          <td>Spam or auto-retry loops</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>A sane order</h2>
+    <ol>
+      <li>If vendor bills pile up in Gmail, start with Invoice Inbox.</li>
+      <li>If SaaS receipts pile up in Gmail, add Receipt Inbox.</li>
+      <li>If Typeform, Tally, or Fillout dump JSON, add Lead Intake.</li>
+      <li>When any of those is live, add Fail Alert to the Error workflow slot.</li>
+    </ol>
+    <p>Want the never-pay rule on paper before you import? That is <a href="never-auto-pay.html">Never Auto-Pay</a> ($9), a checklist, not JSON. Picking one pack instead of a stack? See the <a href="n8n-gmail-sheets.html">invoice vs lead webhook comparison</a>.</p>
+
+    <h2>Questions</h2>
+    <h3>What is an n8n Gmail to Sheets stack?</h3>
+    <p>Invoice Inbox and Receipt Inbox poll Gmail PDFs into Google Sheets. Lead Intake flattens a form webhook into one lead row. Fail Alert posts once to Slack when any of those runs fail.</p>
+    <h3>Does this stack pay vendors or email leads?</h3>
+    <p>No. Invoice Inbox and Receipt Inbox never pay anyone. Lead Intake never emails the lead. Fail Alert only pings your ops channel.</p>
+    <h3>Do I need every pack?</h3>
+    <p>No. Start with the inbox that matches the file (invoices, receipts, or form webhooks). Add Fail Alert once something is live. Never Auto-Pay is optional paper before you import.</p>
+    <p class="note">Checkout is Gumroad. The zip is on your receipt. See <a href="delivery.html">how delivery works</a>.</p>
+  </div>
+  <nav class="related" aria-label="Related products">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="invoice-inbox.html">Invoice Inbox <span class="hint">Gmail invoice PDFs to Sheets.</span></a></li>
+      <li><a href="receipt-inbox.html">Receipt Inbox <span class="hint">Gmail receipt PDFs to Sheets.</span></a></li>
+      <li><a href="lead-intake.html">Lead Intake <span class="hint">Form webhook to one lead row.</span></a></li>
+      <li><a href="n8n-fail-alert.html">n8n Fail Alert <span class="hint">One Slack ping when a run fails.</span></a></li>
+      <li><a href="n8n-gmail-sheets.html">Invoice vs webhook comparison</a></li>
+      <li><a href="index.html">Shop home</a></li>
+    </ul>
+  </nav>
+</main>
+<footer class="site">
+  <div class="wrap">
+    One payment. A zip on your receipt. Yours to keep.
+    <div style="margin-top:10px"><a href="about.html">About</a> · <a href="delivery.html">Delivery</a> · <a href="n8n-gmail-sheets.html">Guide</a> · <a href="https://wisernage.gumroad.com">Your purchases</a></div>
+  </div>
+</footer>
+</body>
+</html>
