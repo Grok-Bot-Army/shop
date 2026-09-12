@@ -13,8 +13,10 @@ Products:
 - Never Auto-Pay checklist ($9): https://grok-bot-army.github.io/shop/never-auto-pay.html
 - Solo Agency Ops Checklists ($9): https://grok-bot-army.github.io/shop/solo-agency-ops-checklists.html
 - Invoice OCR Prompt Pack ($12): https://grok-bot-army.github.io/shop/invoice-ocr-prompt-pack.html
+- Free Invoice Webhook Stub ($0): https://grok-bot-army.github.io/shop/free-invoice-webhook-stub.html
 - Receipt Inbox ($39): https://grok-bot-army.github.io/shop/receipt-inbox.html
 - Lead Intake ($39): https://grok-bot-army.github.io/shop/lead-intake.html
+- Free Lead Intake Sample ($0): https://grok-bot-army.github.io/shop/free-lead-intake-sample.html
 - n8n Webhook Debug Checklist ($9): https://grok-bot-army.github.io/shop/n8n-webhook-debug-checklist.html
 - n8n Fail Alert ($19): https://grok-bot-army.github.io/shop/n8n-fail-alert.html
 - Grok Glue ($29): https://grok-bot-army.github.io/shop/grok-glue.html
