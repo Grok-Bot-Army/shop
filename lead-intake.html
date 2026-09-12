@@ -3,13 +3,69 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lead Intake — Typeform, Tally, Fillout webhook to Google Sheets | Wisernage</title>
-<meta name="description" content="n8n webhook that flattens Typeform, Tally, Fillout, or generic JSON into one Google Sheets lead. Optional HubSpot or Pipedrive. Never emails the lead. $39.">
+<meta name="description" content="n8n lead intake: Typeform to Google Sheets, Tally form webhook to Sheets, Fillout to Sheets. One webhook flattens to one lead row. Never emails the lead. $39.">
 <meta property="og:title" content="Lead Intake — Typeform, Tally, Fillout webhook to Google Sheets">
 <meta property="og:description" content="One n8n webhook. Typeform, Tally, Fillout, or generic JSON. Google Sheets first. Never emails the lead.">
 <meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/lead.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/lead-intake.html">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Lead Intake", "description": "n8n webhook that flattens Typeform, Tally, Fillout, or generic JSON into one Google Sheets lead. Optional HubSpot or Pipedrive. Never emails the lead.", "image": "https://grok-bot-army.github.io/shop/images/web/lead.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "39", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/csrjv"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Lead Intake", "description": "n8n lead intake: Typeform to Google Sheets, Tally form webhook to Sheets, Fillout to Sheets. One webhook flattens to one lead row. Never emails the lead.", "image": "https://grok-bot-army.github.io/shop/images/web/lead.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "39", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/csrjv"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Lead Intake email the lead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It never emails the lead. There is no welcome sequence in this pack. If you want the workflow to email the lead, skip this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I send Typeform to Google Sheets with this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Point Typeform at the POST webhook. Lead Intake flattens the Typeform payload into one Google Sheets lead row. HubSpot or Pipedrive upsert is optional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a Tally form webhook to Sheets work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Point the Tally form webhook at the same POST webhook. It flattens Tally into one lead row in Google Sheets, same as Typeform or Fillout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Fillout to Sheets work the same way?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Fillout to Sheets is one of the four payload shapes. Point Fillout at the webhook. You get one canonical lead row. The lead is never emailed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does n8n lead intake flatten into?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One POST webhook. Four payload shapes — Tally, Typeform, Fillout, or generic JSON. Form webhook flatten to one lead row in Google Sheets. Junk email returns 400. Otherwise you get {ok:true,id}."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Lead Intake for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo operators with more than one form and a spreadsheet they do not trust. Not for Salesforce, Facebook Lead Ads, or anyone who wants the workflow to email the lead."
+      }
+    }
+  ]
+}
+</script>
 <body>
 <header class="site wrap">
   <a class="mark" href="index.html">Wisernage</a>
@@ -25,13 +81,54 @@
   <p class="sub">One POST webhook. Four payload shapes. Sheets first. HubSpot or Pipedrive if you want them.</p>
   <div class="actions"><a class="btn" href="https://gumroad.com/l/csrjv">Get Lead Intake · $39</a> <a class="btn ghost" href="index.html">All products</a></div>
   <div class="prose">
-    <h2>Who it is for</h2>
-    <p>Solo operators with more than one form and a spreadsheet they do not trust.</p>
-    <h2>How to start</h2>
-    <p>Import the workflow. Point every form at the webhook. Watch the sheet fill.</p>
-    <h2>What you get</h2>
-    <ul><li>Flattens Tally, Typeform, Fillout, or generic JSON into one lead.</li><li>Junk email returns 400. Otherwise you get {ok:true,id}.</li><li>Always appends Google Sheets. CRM upsert is optional.</li><li>Never emails the lead.</li></ul>
+    <h2>What it does</h2>
+    <p>Lead Intake is n8n lead intake. One POST webhook. It flattens Typeform, Tally, Fillout, or a random webhook into one canonical lead row in Google Sheets. HubSpot or Pipedrive if you want them.</p>
+    <p>That is the whole job: form webhook flatten to one lead row. Sheets first. Nobody gets a surprise email.</p>
+    <h2>Supported sources</h2>
+    <p>Four payload shapes. Point Tally, Typeform, Fillout, or generic JSON at the same webhook.</p>
+    <ul>
+      <li>Typeform to Google Sheets — same POST, one flattened lead row.</li>
+      <li>Tally form webhook to Sheets — same flatten, same sheet.</li>
+      <li>Fillout to Sheets — same webhook, same canonical row.</li>
+      <li>A random webhook / generic JSON — if it is not one of those three, it still goes through the flatten.</li>
+    </ul>
+    <h2>What it never does</h2>
+    <p>It never emails the lead. There is no welcome sequence, no autoresponder, no “thanks for submitting” in this pack. If you want the workflow to email the lead, skip this.</p>
     <p class="note">Not for Salesforce, Facebook Lead Ads, or anyone who wants the workflow to email the lead.</p>
+    <h2>Who it is for</h2>
+    <p>Solo operators with more than one form and a spreadsheet they do not trust. You already run Tally, Typeform, Fillout, or a random webhook. You want one Sheets row you can actually use.</p>
+    <h2>Typeform, Tally, or Fillout webhook to Google Sheets</h2>
+    <p>One n8n webhook. Point Typeform, a Tally form webhook, Fillout, or generic JSON at it. The pack flattens the payload to one lead row in Google Sheets. That is Typeform to Google Sheets, Tally form webhook to Sheets, Fillout to Sheets — same flatten, same sheet.</p>
+    <p>Always appends Google Sheets. CRM upsert is optional. HubSpot or Pipedrive if you want them. The lead is never emailed.</p>
+    <h2>Setup</h2>
+    <ol>
+      <li>Buy the zip on Gumroad. You get the n8n workflow.</li>
+      <li>Import the workflow into your n8n.</li>
+      <li>Point every form at the POST webhook — Tally, Typeform, Fillout, or generic JSON.</li>
+      <li>Watch the sheet fill. Always appends Google Sheets. CRM upsert is optional.</li>
+      <li>Junk email returns 400. Otherwise you get {ok:true,id}. The lead is never emailed.</li>
+    </ol>
+    <h2>What you get</h2>
+    <ul>
+      <li>Flattens Tally, Typeform, Fillout, or generic JSON into one lead.</li>
+      <li>Junk email returns 400. Otherwise you get {ok:true,id}.</li>
+      <li>Always appends Google Sheets. CRM upsert is optional.</li>
+      <li>Never emails the lead.</li>
+    </ul>
+    <h2>Questions</h2>
+    <h3>Does Lead Intake email the lead?</h3>
+    <p>No. It never emails the lead. There is no welcome sequence in this pack. If you want the workflow to email the lead, skip this.</p>
+    <h3>Can I send Typeform to Google Sheets with this?</h3>
+    <p>Yes. Point Typeform at the POST webhook. Lead Intake flattens the Typeform payload into one Google Sheets lead row. HubSpot or Pipedrive upsert is optional.</p>
+    <h3>Does a Tally form webhook to Sheets work?</h3>
+    <p>Yes. Point the Tally form webhook at the same POST webhook. It flattens Tally into one lead row in Google Sheets, same as Typeform or Fillout.</p>
+    <h3>Does Fillout to Sheets work the same way?</h3>
+    <p>Yes. Fillout to Sheets is one of the four payload shapes. Point Fillout at the webhook. You get one canonical lead row. The lead is never emailed.</p>
+    <h3>What does n8n lead intake flatten into?</h3>
+    <p>One POST webhook. Four payload shapes — Tally, Typeform, Fillout, or generic JSON. Form webhook flatten to one lead row in Google Sheets. Junk email returns 400. Otherwise you get {ok:true,id}.</p>
+    <h3>Who is Lead Intake for?</h3>
+    <p>Solo operators with more than one form and a spreadsheet they do not trust. Not for Salesforce, Facebook Lead Ads, or anyone who wants the workflow to email the lead.</p>
+    <p>Vendor invoice PDFs in Gmail instead of form webhooks? See <a href="invoice-inbox.html">Invoice Inbox</a>.</p>
   </div>
   <div class="actions"><a class="btn" href="https://gumroad.com/l/csrjv">Get Lead Intake · $39</a> <a class="btn ghost" href="index.html">All products</a></div>
 </main>
