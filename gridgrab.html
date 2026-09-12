@@ -3,18 +3,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GridGrab — copy SPA, HTML, and div tables to Excel or Sheets | Wisernage</title>
-<meta name="description" content="Chrome extension that copies HTML tables, SPA grids, and div tables from the current tab to Excel, Google Sheets, CSV, or Markdown. Load unpacked. No license key. No row cap. $19.">
+<meta name="description" content="Chrome extension that copies HTML tables, SPA / div grids, and ARIA grids from the current tab to Excel or Google Sheets. Load unpacked. No license key. No row cap. $19.">
 <meta property="og:title" content="GridGrab — copy SPA, HTML, and div tables to Excel or Sheets">
-<meta property="og:description" content="Copy the HTML table, SPA grid, or div table on this Chrome tab to Excel or Google Sheets. Load unpacked. No license key. No row cap.">
+<meta property="og:description" content="Copy the HTML table, SPA / div grid, or ARIA grid on this Chrome tab to Excel or Google Sheets. Load unpacked. No license key. No row cap.">
 <meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/gridgrab.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/gridgrab.html">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "GridGrab", "description": "Chrome extension that copies HTML tables, SPA grids, and div tables from the current tab to Excel, Google Sheets, CSV, or Markdown. Load unpacked. No license key. No row cap.", "image": "https://grok-bot-army.github.io/shop/images/web/gridgrab.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "19", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/gpjczs"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "GridGrab", "description": "Chrome extension that copies HTML tables, SPA / div grids, and ARIA grids from the current tab to Excel or Google Sheets. Load unpacked. No license key. No row cap.", "image": "https://grok-bot-army.github.io/shop/images/web/gridgrab.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "19", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/gpjczs"}}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I copy an HTML table to Excel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the page with the table. Click the GridGrab icon. It detects the HTML table on the current tab, shows a preview, then you copy TSV and paste into Excel. There is no row cap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can GridGrab copy a SPA or div grid to Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GridGrab reads SPA / div grids and ARIA grids on the current tab, not only HTML tables. Copy TSV and paste into Google Sheets. It is not a scrape of a Google Sheets htmlview iframe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GridGrab read ARIA grids?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. It looks for HTML tables, SPA / div grids, and ARIA grids on the current tab. Same preview. Same TSV, CSV, or Markdown copy. Same no row cap."
+      }
+    },
     {
       "@type": "Question",
       "name": "Does GridGrab need a license key?",
@@ -28,7 +52,7 @@
       "name": "Is GridGrab on the Chrome Web Store?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. GridGrab is not in the Chrome Web Store. Unzip the folder and Load unpacked in Chrome with Developer mode on."
+        "text": "No. GridGrab is not in the Chrome Web Store. Unzip the folder and Load unpacked in Chrome with Developer mode on. Chromium only."
       }
     },
     {
@@ -54,6 +78,14 @@
         "@type": "Answer",
         "text": "No. There is no row cap. Copy TSV for Excel and Sheets, CSV, Markdown, or download .csv. Use Next to merge pages, or scroll to merge infinite lists."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is GridGrab $19 one-time instead of a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Gumroad zip includes Pro. No license key, no free-tier row cap, no monthly plan. Table Capture and CopyTables-style tools often live on the Chrome Web Store and charge a subscription. GridGrab is a $19 Load unpacked zip you keep. Chromium only. Not in the Chrome Web Store."
+      }
     }
   ]
 }
@@ -73,13 +105,32 @@
   <p class="sub">Unzip, Load unpacked in Chrome. This zip includes Pro. It is not in the Chrome Web Store.</p>
   <div class="actions"><a class="btn" href="https://gumroad.com/l/gpjczs">Get GridGrab · $19</a> <a class="btn ghost" href="index.html">All products</a></div>
   <div class="prose">
+    <h2>How it works</h2>
+    <p>Open the page with the grid. Click the GridGrab icon. It detects an HTML table, a SPA / div grid, or an ARIA grid on the current tab. You get a preview. Then copy TSV for Excel or Google Sheets, or copy CSV / Markdown, or download a .csv. There is no row cap.</p>
+    <ol>
+      <li>Click the GridGrab icon on the tab in front of you.</li>
+      <li>It finds the HTML table, SPA / div grid, or ARIA grid.</li>
+      <li>Check the preview.</li>
+      <li>Copy TSV, CSV, or Markdown — or download .csv.</li>
+    </ol>
     <h2>Who it is for</h2>
-    <p>Anyone who keeps pasting half a table out of an admin UI.</p>
-    <h2>Copy SPA and HTML tables to Excel or Sheets</h2>
-    <p>Admin UIs hide grids in divs. GridGrab reads the current Chrome tab — HTML tables, SPA / div grids, and ARIA grids — and copies TSV for Excel and Google Sheets, or CSV / Markdown. There is no row cap. It is not a Google Sheets iframe scrape, and GitHub Issues tables can miss rows.</p>
+    <p>Anyone who keeps pasting half a table out of an admin UI. Also wiki tables, and SPA dashboards that never expose a real HTML table.</p>
+    <ul>
+      <li>Admin UIs that hide rows in nested divs.</li>
+      <li>Wiki and docs tables you need in Excel tonight.</li>
+      <li>SPA dashboards that look like a spreadsheet and copy like a screenshot.</li>
+    </ul>
+    <h2>Copy an HTML table to Excel</h2>
+    <p>If the page has a real HTML table, GridGrab reads it on the current tab and copies TSV. Paste into Excel. Columns stay columns. There is no row cap on that copy.</p>
+    <h2>Copy a SPA / div grid to Google Sheets</h2>
+    <p>Most admin tools are not HTML tables. They are div grids. GridGrab treats those SPA / div grids — and ARIA grids — as the thing you meant to copy. Copy TSV, paste into Google Sheets. Same as Excel.</p>
+    <p>It is not a scrape of a Google Sheets /htmlview iframe. If you are sitting inside Sheets, use Sheets. GridGrab is for the grid on the page in front of you.</p>
+    <h2>ARIA grids</h2>
+    <p>If the page exposes an ARIA grid, GridGrab looks for that too. Same preview. Same TSV / CSV / Markdown. Same no row cap.</p>
     <h2>What’s in the zip</h2>
     <ul><li>The extension folder ready for Load unpacked.</li><li>Pro included — no license key, no free-tier gate on the Gumroad build.</li><li>Works offline after install. Local only.</li></ul>
-    <h2>How to start</h2>
+    <h2>Chrome extension: Load unpacked</h2>
+    <p>This is a Chrome extension you sideload. It is not a Chrome Web Store listing. Chromium only.</p>
     <ol>
       <li>Buy and download the zip from Gumroad.</li>
       <li>Unzip it somewhere permanent (not Downloads if you empty that folder).</li>
@@ -87,9 +138,43 @@
       <li>Open the page with the table. Click the GridGrab icon. Copy TSV for Excel/Sheets, or CSV / Markdown / download .csv.</li>
     </ol>
     <h2>What you get</h2>
-    <ul><li>Finds HTML tables, SPA / div grids, and ARIA grids on the current tab.</li><li>Copy TSV for Excel and Sheets, CSV, Markdown, or download .csv. No row cap.</li><li>Click Next to merge pages, or scroll to merge infinite lists.</li><li>Permissions: activeTab, scripting, storage.</li></ul>
-    <h2>Limits</h2>
-    <p class="note">Not in the Chrome Web Store. GitHub Issues tables and Google Sheets htmlview can miss rows. If it cannot copy a normal table on the page in front of you within a few minutes, ask for a refund on the Gumroad receipt.</p>
+    <ul>
+      <li>Finds HTML tables, SPA / div grids, and ARIA grids on the current tab.</li>
+      <li>Copy TSV for Excel and Sheets, CSV, Markdown, or download .csv. No row cap.</li>
+      <li>Click Next to merge pages, or scroll to merge infinite lists.</li>
+      <li>Permissions: activeTab, scripting, storage.</li>
+    </ul>
+    <h2>Why $19 one-time</h2>
+    <p>Table Capture and CopyTables-style tools often live in the Chrome Web Store and charge a subscription, or gate the useful export behind a free-tier row cap. GridGrab is a $19 zip. Pro is in that zip. No license key. No monthly plan. You Load unpacked. You keep it.</p>
+    <p>The trade is honest: not on the Chrome Web Store, Chromium only, one payment.</p>
+    <h2>Honest limits</h2>
+    <ul>
+      <li>Not in the Chrome Web Store. You Load unpacked with Developer mode on.</li>
+      <li>Chromium only. We document Chrome. This is not a Firefox or Safari add-on.</li>
+      <li>Google Sheets /htmlview iframes can miss rows. This is not a Sheets iframe scrape.</li>
+      <li>GitHub Issues lists and tables can miss rows. This is not a GitHub Issues scraper.</li>
+    </ul>
+    <p class="note">If it cannot copy a normal table on the page in front of you within a few minutes, ask for a refund on the Gumroad receipt.</p>
+    <h2>Questions</h2>
+    <h3>How do I copy an HTML table to Excel?</h3>
+    <p>Open the page with the table. Click the GridGrab icon. It detects the HTML table on the current tab, shows a preview, then you copy TSV and paste into Excel. There is no row cap.</p>
+    <h3>Can GridGrab copy a SPA or div grid to Google Sheets?</h3>
+    <p>Yes. GridGrab reads SPA / div grids and ARIA grids on the current tab, not only HTML tables. Copy TSV and paste into Google Sheets. It is not a scrape of a Google Sheets htmlview iframe.</p>
+    <h3>Does GridGrab read ARIA grids?</h3>
+    <p>Yes. It looks for HTML tables, SPA / div grids, and ARIA grids on the current tab. Same preview. Same TSV, CSV, or Markdown copy. Same no row cap.</p>
+    <h3>Does GridGrab need a license key?</h3>
+    <p>No. The Gumroad zip includes Pro. There is no license key and no free-tier gate on that build.</p>
+    <h3>Is GridGrab on the Chrome Web Store?</h3>
+    <p>No. GridGrab is not in the Chrome Web Store. Unzip the folder and Load unpacked in Chrome with Developer mode on. Chromium only.</p>
+    <h3>Does GridGrab copy Google Sheets from an iframe?</h3>
+    <p>No. GridGrab copies the grid on the page in front of you — HTML tables, SPA / div grids, and ARIA grids on the current tab. Google Sheets htmlview can miss rows. It is not a Sheets iframe scrape.</p>
+    <h3>Can GridGrab scrape GitHub Issues tables?</h3>
+    <p>GitHub Issues tables can miss rows. GridGrab is built for the table or SPA grid on the current tab, not as a GitHub Issues scraper.</p>
+    <h3>Is there a row cap?</h3>
+    <p>No. There is no row cap. Copy TSV for Excel and Sheets, CSV, Markdown, or download .csv. Use Next to merge pages, or scroll to merge infinite lists.</p>
+    <h3>Why is GridGrab $19 one-time instead of a subscription?</h3>
+    <p>The Gumroad zip includes Pro. No license key, no free-tier row cap, no monthly plan. Table Capture and CopyTables-style tools often live on the Chrome Web Store and charge a subscription. GridGrab is a $19 Load unpacked zip you keep. Chromium only. Not in the Chrome Web Store.</p>
+    <p>Logging vendor invoice PDFs from Gmail into Sheets instead? See <a href="invoice-inbox.html">Invoice Inbox</a>.</p>
   </div>
   <div class="actions"><a class="btn" href="https://gumroad.com/l/gpjczs">Get GridGrab · $19</a> <a class="btn ghost" href="index.html">All products</a></div>
 </main>
