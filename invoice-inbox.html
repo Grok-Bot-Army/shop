@@ -3,13 +3,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Invoice Inbox — Gmail invoice PDFs to Google Sheets with n8n | Wisernage</title>
-<meta name="description" content="n8n pack that polls Gmail for invoice PDFs and writes vendor, amount, and due date to Google Sheets. Regex on the PDF by default. Never pays anyone. $49.">
+<meta name="description" content="n8n invoice workflow that polls Gmail for vendor invoice PDFs and writes vendor, amount, and due date to Google Sheets. Regex on the PDF. Never pays anyone. $49.">
 <meta property="og:title" content="Invoice Inbox — Gmail invoice PDFs to Google Sheets with n8n">
 <meta property="og:description" content="n8n workflows poll Gmail for invoice PDFs and log one Google Sheets row each. Status is logged, never paid.">
 <meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/invoice.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/invoice-inbox.html">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Invoice Inbox", "description": "n8n pack that polls Gmail for invoice PDFs and writes vendor, amount, and due date to Google Sheets. Regex on the PDF by default. Never pays anyone.", "image": "https://grok-bot-army.github.io/shop/images/web/invoice.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "49", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/kqcpea"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Invoice Inbox", "description": "n8n invoice workflow that polls Gmail for vendor invoice PDFs and writes vendor, amount, and due date to Google Sheets. Regex on the PDF. Never pays anyone.", "image": "https://grok-bot-army.github.io/shop/images/web/invoice.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "49", "availability": "https://schema.org/InStock", "url": "https://gumroad.com/l/kqcpea"}}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Invoice Inbox pay vendors or auto-pay bills?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It never pays a vendor, never talks to a bank, never creates a bill, and never emails the vendor. Status is logged in Google Sheets. There is no auto-pay path."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Gmail invoice PDFs get into Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two n8n workflows poll Gmail for PDF invoices, extract vendor, amount, and due date with regex on the PDF text, and append one Google Sheets row each. Below 70 confidence, status is needs_review and Slack gets a ping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an n8n invoice workflow I import myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You import the two workflows into your n8n, connect Gmail, Google Sheets, and Slack, and turn them on. Default extract is regex. No LLM required to run."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Invoice Inbox for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Freelancers and tiny ops teams drowning in vendor invoice PDFs in Gmail. You live in Gmail and Sheets, not AP software. If you already run QuickBooks Bills, Xero, or a bank feed, skip this."
+      }
+    }
+  ]
+}
+</script>
 <body>
 <header class="site wrap">
   <a class="mark" href="index.html">Wisernage</a>
@@ -25,15 +65,42 @@
   <p class="sub">Two workflows. Regex on the PDF by default. Below 70 confidence, a human has to look. Status is logged, never paid.</p>
   <div class="actions"><a class="btn" href="https://gumroad.com/l/kqcpea">Get Invoice Inbox · $49</a> <a class="btn ghost" href="index.html">All products</a></div>
   <div class="prose">
+    <h2>What it does</h2>
+    <p>Invoice Inbox is an n8n invoice workflow for vendor invoices sitting in Gmail. It polls Gmail for invoice PDFs, reads vendor, amount, and due date with regex on the PDF text, and writes one Google Sheets row each. Status is logged. Nobody gets paid.</p>
+    <p>That is the whole job: Gmail invoice PDF to Google Sheets. A log of what arrived. Not a robot that pays it.</p>
+    <h2>What it never does</h2>
+    <p>It never pays a vendor. It never talks to a bank. It never creates a bill. It never emails the vendor. There is no auto-pay path in the pack.</p>
+    <p class="note">If you already run QuickBooks Bills, Xero, or a bank feed, skip this.</p>
     <h2>Who it is for</h2>
-    <p>Freelancers and tiny agencies who live in Gmail and Sheets, not AP software.</p>
+    <p>Freelancers and tiny ops teams drowning in vendor PDFs. You live in Gmail and Google Sheets. You do not want AP software. You want a log of what arrived, and a Slack ping when the extract is shaky.</p>
     <h2>Gmail invoice PDFs to Google Sheets with n8n</h2>
     <p>Import two n8n workflows. They poll Gmail for PDF invoices, extract vendor, amount, and due date with regex on the PDF text, and append one row in Google Sheets. Below 70 confidence, status is needs_review and Slack gets a ping. The pack never pays a vendor or talks to a bank.</p>
-    <h2>How to start</h2>
-    <p>Import the two workflows. Connect Gmail, Sheets, and Slack. Turn them on.</p>
+    <p>This is vendor-invoice automation for Gmail: find the PDF, log the row, stop. No LLM required to run.</p>
+    <h2>Setup</h2>
+    <ol>
+      <li>Buy the zip on Gumroad. You get two n8n workflows.</li>
+      <li>Import both into your n8n.</li>
+      <li>Connect Gmail, Google Sheets, and Slack.</li>
+      <li>Turn them on. They poll Gmail for PDF invoices and append Sheets rows.</li>
+      <li>Below 70 confidence, the row is needs_review and Slack gets a ping. A human looks.</li>
+    </ol>
     <h2>What you get</h2>
-    <ul><li>Polls Gmail for PDF invoices and writes vendor, amount, and due date to Google Sheets.</li><li>Default extract is regex on PDF text. No LLM required to run.</li><li>Confidence under 70 writes needs_review and pings Slack.</li><li>Never talks to a bank, never creates a bill, never emails the vendor.</li></ul>
-    <p class="note">If you already run QuickBooks Bills, Xero, or a bank feed, skip this.</p>
+    <ul>
+      <li>Polls Gmail for PDF invoices and writes vendor, amount, and due date to Google Sheets.</li>
+      <li>Default extract is regex on PDF text. No LLM required to run.</li>
+      <li>Confidence under 70 writes needs_review and pings Slack.</li>
+      <li>Never talks to a bank, never creates a bill, never emails the vendor.</li>
+    </ul>
+    <h2>Questions</h2>
+    <h3>Does Invoice Inbox pay vendors or auto-pay bills?</h3>
+    <p>No. It never pays a vendor, never talks to a bank, never creates a bill, and never emails the vendor. Status is logged in Google Sheets. There is no auto-pay path.</p>
+    <h3>How do Gmail invoice PDFs get into Google Sheets?</h3>
+    <p>Two n8n workflows poll Gmail for PDF invoices, extract vendor, amount, and due date with regex on the PDF text, and append one Google Sheets row each. Below 70 confidence, status is needs_review and Slack gets a ping.</p>
+    <h3>Is this an n8n invoice workflow I import myself?</h3>
+    <p>Yes. You import the two workflows into your n8n, connect Gmail, Google Sheets, and Slack, and turn them on. Default extract is regex. No LLM required to run.</p>
+    <h3>Who is Invoice Inbox for?</h3>
+    <p>Freelancers and tiny ops teams drowning in vendor invoice PDFs in Gmail. You live in Gmail and Sheets, not AP software. If you already run QuickBooks Bills, Xero, or a bank feed, skip this.</p>
+    <p>Need the table on a dashboard in Excel instead? See <a href="gridgrab.html">GridGrab</a>.</p>
   </div>
   <div class="actions"><a class="btn" href="https://gumroad.com/l/kqcpea">Get Invoice Inbox · $49</a> <a class="btn ghost" href="index.html">All products</a></div>
 </main>

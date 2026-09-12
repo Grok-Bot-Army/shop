@@ -143,7 +143,8 @@ footer.site a { color: var(--ink); }
 .actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 28px; }
 .prose { max-width: 62ch; }
 .prose h2 { font-size: 20px; margin: 28px 0 8px; }
-.prose ul { padding-left: 1.2em; }
+.prose h3 { font-size: 17px; margin: 20px 0 6px; }
+.prose ul, .prose ol { padding-left: 1.2em; }
 .prose li { margin: 6px 0; }
 .note {
   background: var(--wash);
