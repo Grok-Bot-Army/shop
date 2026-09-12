@@ -2,13 +2,14 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Receipt Inbox — Wisernage</title>
-<meta name="description" content="Stop letting SaaS receipt PDFs rot in Gmail. One Sheets row each. The workflow never pays.">
+<title>Receipt Inbox — Gmail receipt PDFs to Sheets (n8n) | Wisernage</title>
+<meta name="description" content="n8n receipt workflow that polls Gmail for SaaS and vendor receipt PDFs and writes merchant, amount, and date to Google Sheets. Regex on the PDF. Never pays anyone. $39.">
 <meta property="og:title" content="Receipts in Gmail, one row in Sheets. Never paid.">
 <meta property="og:description" content="SaaS and vendor receipt PDFs in Gmail become one Sheets row plus a Drive file. It never pays anyone.">
 <meta property="og:image" content="https://grok-bot-army.github.io/shop/images/web/receipt.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/receipt-inbox.html">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Receipt Inbox", "description": "n8n receipt workflow that polls Gmail for SaaS and vendor receipt PDFs and writes merchant, amount, and date to Google Sheets. Regex on the PDF. Never pays anyone.", "image": "https://grok-bot-army.github.io/shop/images/web/receipt.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "39", "availability": "https://schema.org/InStock", "url": "https://wisernage.gumroad.com/l/fshwnm"}}</script>
 <body>
 <header class="site wrap">
   <a class="mark" href="index.html">Wisernage</a>
@@ -19,20 +20,26 @@
 </header>
 <main class="product wrap">
   <img class="heroimg" src="images/web/receipt.jpg" alt="Receipt Inbox">
-  <div class="kicker">n8n for freelancers · coming soon</div>
+  <div class="kicker">n8n for freelancers</div>
   <h1>Receipts in Gmail, one row in Sheets. Never paid.</h1>
   <p class="sub">Two workflows. Regex on the PDF by default. Below 70 confidence, a human has to look. Receipts land in Sheets and Drive. Never paid.</p>
-  <div class="actions"><span class="btn" style="opacity:.55;pointer-events:none">Coming soon</span> <a class="btn ghost" href="index.html">All products</a></div>
+  <div class="actions"><a class="btn" href="https://wisernage.gumroad.com/l/fshwnm?utm_source=shop&utm_medium=referral&utm_campaign=receipt_inbox_202609&utm_content=product_cta">Get Receipt Inbox · $39</a> <a class="btn ghost" href="index.html">All products</a></div>
   <div class="prose">
     <h2>Who it is for</h2>
     <p>Freelancers and tiny agencies who live in Gmail and Sheets, not expense software. Invoice Inbox logs bills you owe. This logs receipts you bought.</p>
     <h2>How to start</h2>
-    <p>When it ships: import the two workflows. Connect Gmail, Sheets, Drive, and Slack. Turn them on.</p>
+    <ol>
+      <li>Buy the zip on Gumroad. You get two n8n workflows.</li>
+      <li>Import both into your n8n.</li>
+      <li>Connect Gmail, Google Sheets, Drive, and Slack.</li>
+      <li>Turn them on. They poll Gmail for receipt PDFs and append Sheets rows.</li>
+      <li>Below 70 confidence, the row is needs_review and Slack gets a ping. A human looks.</li>
+    </ol>
     <h2>What you get</h2>
     <ul><li>Polls Gmail for receipt PDFs and writes merchant, amount, and date to Google Sheets.</li><li>Default extract is regex on PDF text. No LLM required to run.</li><li>Stores the PDF in Drive. Confidence under 70 writes needs_review and pings Slack.</li><li>Never talks to a bank, never pays anyone, never emails the merchant.</li></ul>
-    <p class="note">If you already run Expensify or full receipt bookkeeping, skip this. Checkout is paused until the Gumroad permalink is live.</p>
+    <p class="note">If you already run Expensify or full receipt bookkeeping, skip this.</p>
   </div>
-  <div class="actions"><span class="btn" style="opacity:.55;pointer-events:none">Coming soon</span> <a class="btn ghost" href="index.html">All products</a></div>
+  <div class="actions"><a class="btn" href="https://wisernage.gumroad.com/l/fshwnm?utm_source=shop&utm_medium=referral&utm_campaign=receipt_inbox_202609&utm_content=product_cta_footer">Get Receipt Inbox · $39</a> <a class="btn ghost" href="index.html">All products</a></div>
 </main>
 <footer class="site">
   <div class="wrap">
