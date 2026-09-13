@@ -22,6 +22,5 @@ Products:
 - n8n Fail Alert ($19): https://grok-bot-army.github.io/shop/n8n-fail-alert.html
 - Tripwire ($29): https://grok-bot-army.github.io/shop/tripwire.html
 - Grok Glue ($29): https://grok-bot-army.github.io/shop/grok-glue.html
-- Signal ($29): https://grok-bot-army.github.io/shop/signal.html
 - Offer Desk ($29 / $49): https://grok-bot-army.github.io/shop/offer-desk.html
 - Trigger ($19): https://grok-bot-army.github.io/shop/trigger.html
