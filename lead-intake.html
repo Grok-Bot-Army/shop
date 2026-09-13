@@ -59,7 +59,7 @@
       "name": "What does n8n lead intake flatten into?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One POST webhook. Four payload shapes — Tally, Typeform, Fillout, or generic JSON. Form webhook flatten to one lead row in Google Sheets. Junk email returns 400. Otherwise you get {ok:true,id}."
+        "text": "One POST webhook. Four payload shapes: Tally, Typeform, Fillout, or generic JSON. Form webhook flatten to one lead row in Google Sheets. Junk email returns 400. Otherwise you get {ok:true,id}."
       }
     },
     {
@@ -96,10 +96,10 @@
     <h2>Supported sources</h2>
     <p>Four payload shapes. Point Tally, Typeform, Fillout, or generic JSON at the same webhook.</p>
     <ul>
-      <li>Typeform to Google Sheets — same POST, one flattened lead row.</li>
-      <li>Tally form webhook to Sheets — same flatten, same sheet.</li>
-      <li>Fillout to Sheets — same webhook, same canonical row.</li>
-      <li>A random webhook / generic JSON — if it is not one of those three, it still goes through the flatten.</li>
+      <li>Typeform to Google Sheets. Same POST, one flattened lead row.</li>
+      <li>Tally form webhook to Sheets. Same flatten, same sheet.</li>
+      <li>Fillout to Sheets. Same webhook, same canonical row.</li>
+      <li>A random webhook / generic JSON. If it is not one of those three, it still goes through the flatten.</li>
     </ul>
     <h2>What it never does</h2>
     <p>It never emails the lead. There is no welcome sequence, no autoresponder, no “thanks for submitting” in this pack. If you want the workflow to email the lead, skip this.</p>
@@ -107,13 +107,13 @@
     <h2>Who it is for</h2>
     <p>Solo operators with more than one form and a spreadsheet they do not trust. You already run Tally, Typeform, Fillout, or a random webhook. You want one Sheets row you can actually use.</p>
     <h2>Typeform, Tally, or Fillout webhook to Google Sheets</h2>
-    <p>One n8n webhook. Point Typeform, a Tally form webhook, Fillout, or generic JSON at it. The pack flattens the payload to one lead row in Google Sheets. That is Typeform to Google Sheets, Tally form webhook to Sheets, Fillout to Sheets — same flatten, same sheet.</p>
+    <p>One n8n webhook. Point Typeform, a Tally form webhook, Fillout, or generic JSON at it. The pack flattens the payload to one lead row in Google Sheets. That is Typeform to Google Sheets, Tally form webhook to Sheets, Fillout to Sheets. Same flatten, same sheet.</p>
     <p>Always appends Google Sheets. CRM upsert is optional. HubSpot or Pipedrive if you want them. The lead is never emailed.</p>
     <h2>Setup</h2>
     <ol>
       <li>Buy the zip on Gumroad. You get the n8n workflow.</li>
       <li>Import the workflow into your n8n.</li>
-      <li>Point every form at the POST webhook — Tally, Typeform, Fillout, or generic JSON.</li>
+      <li>Point every form at the POST webhook: Tally, Typeform, Fillout, or generic JSON.</li>
       <li>Watch the sheet fill. Always appends Google Sheets. CRM upsert is optional.</li>
       <li>Junk email returns 400. Otherwise you get {ok:true,id}. The lead is never emailed.</li>
     </ol>
@@ -134,7 +134,7 @@
     <h3>Does Fillout to Sheets work the same way?</h3>
     <p>Yes. Fillout to Sheets is one of the four payload shapes. Point Fillout at the webhook. You get one canonical lead row. The lead is never emailed.</p>
     <h3>What does n8n lead intake flatten into?</h3>
-    <p>One POST webhook. Four payload shapes — Tally, Typeform, Fillout, or generic JSON. Form webhook flatten to one lead row in Google Sheets. Junk email returns 400. Otherwise you get {ok:true,id}.</p>
+    <p>One POST webhook. Four payload shapes: Tally, Typeform, Fillout, or generic JSON. Form webhook flatten to one lead row in Google Sheets. Junk email returns 400. Otherwise you get {ok:true,id}.</p>
     <h3>Who is Lead Intake for?</h3>
     <p>Solo operators with more than one form and a spreadsheet they do not trust. Not for Salesforce, Facebook Lead Ads, or anyone who wants the workflow to email the lead.</p>
     <p>Vendor invoice PDFs in Gmail instead of form webhooks? See <a href="invoice-inbox.html">Invoice Inbox</a>.</p>
