@@ -16,6 +16,47 @@
 <meta name="twitter:image" content="https://grok-bot-army.github.io/shop/images/web/glue.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/n8n-fail-alert.html">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Fail Alert spam Slack or auto-retry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It alerts only on failed executions, to your ops channel. It does not auto-retry in a loop. It does not fix the failing workflow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a Fail Alert include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Workflow name, last node, error text, and the execution URL. Slack is the default. Telegram JSON is optional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Fail Alert pay anyone or email leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It does not email leads or vendors. It does not pay anyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Fail Alert different from Tripwire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fail Alert is the ping. Tripwire ($29) adds one Sheets row and a heartbeat. Neither pages clients or pays anyone."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"n8n Fail Alert","description":"Error workflow to Slack or Telegram with execution URL. Never-spam. Never pays anyone.","image":"https://grok-bot-army.github.io/shop/images/web/glue.jpg","brand":{"@type":"Brand","name":"Wisernage"},"offers":{"@type":"Offer","priceCurrency":"USD","price":"19","availability":"https://schema.org/InStock","url":"https://wisernage.gumroad.com/l/oznwo?utm_source=shop&utm_medium=referral&utm_campaign=fail_alert_evergreen&utm_content=product_cta"}}</script>
 <body>
 <header class="site wrap">
@@ -51,6 +92,16 @@
       <li>Does not pay anyone.</li>
     </ul>
     <p class="note">Does not fix the failing workflow for you. Does not auto-retry in a loop. Full Gmail to Sheets is <a href="invoice-inbox.html">Invoice Inbox</a>. Form to Sheets is <a href="lead-intake.html">Lead Intake</a>.</p>
+
+    <h2>Questions</h2>
+    <h3>Does Fail Alert spam Slack or auto-retry?</h3>
+    <p>No. It alerts only on failed executions, to your ops channel. It does not auto-retry in a loop. It does not fix the failing workflow.</p>
+    <h3>What does a Fail Alert include?</h3>
+    <p>Workflow name, last node, error text, and the execution URL. Slack is the default. Telegram JSON is optional.</p>
+    <h3>Does Fail Alert pay anyone or email leads?</h3>
+    <p>No. It does not email leads or vendors. It does not pay anyone.</p>
+    <h3>How is Fail Alert different from Tripwire?</h3>
+    <p>Fail Alert is the ping. <a href="tripwire.html">Tripwire</a> ($29) adds one Sheets row and a heartbeat. Neither pages clients or pays anyone.</p>
   </div>
   <section class="upsell">
     <h2>Want a Sheets log and a heartbeat?</h2>
