@@ -16,6 +16,47 @@
 <meta name="twitter:image" content="https://grok-bot-army.github.io/shop/images/web/glue.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/tripwire.html">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Tripwire page clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Alerts go to your ops Slack only. The optional Gmail draft is to you, not a client. No on-call page. No LLM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Tripwire write when a workflow fails?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One Google Sheets row and a ping to your ops Slack. Import tripwire-error.json, connect Sheets and Slack, and set it as the Error workflow on each pack you care about."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Tripwire heartbeat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "tripwire-heartbeat.json. A silent death still shows up. Pair it with the error workflow so a pack that stops running is not invisible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Tripwire different from Fail Alert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fail Alert ($19) is a Slack or Telegram ping with the execution URL. Tripwire ($29) also writes a Sheets log and includes a heartbeat. Neither pages clients or pays anyone."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Tripwire","description":"Failed n8n workflows write one Sheets row and ping your ops Slack. Heartbeat included. Never pages clients. No LLM.","image":"https://grok-bot-army.github.io/shop/images/web/glue.jpg","brand":{"@type":"Brand","name":"Wisernage"},"offers":{"@type":"Offer","priceCurrency":"USD","price":"29","availability":"https://schema.org/InStock","url":"https://wisernage.gumroad.com/l/zkztwh?utm_source=shop&utm_medium=referral&utm_campaign=tripwire_202609&utm_content=product_cta"}}</script>
 <body>
 <header class="site wrap">
@@ -52,6 +93,16 @@
       <li>Does not pay anyone.</li>
     </ul>
     <p class="note">Does not fix the failing workflow for you. Does not auto-retry in a loop. Slack-only ping is <a href="n8n-fail-alert.html">Fail Alert</a> ($19). Full Gmail to Sheets is <a href="invoice-inbox.html">Invoice Inbox</a>. Form to Sheets is <a href="lead-intake.html">Lead Intake</a>.</p>
+
+    <h2>Questions</h2>
+    <h3>Does Tripwire page clients?</h3>
+    <p>No. Alerts go to your ops Slack only. The optional Gmail draft is to you, not a client. No on-call page. No LLM.</p>
+    <h3>What does Tripwire write when a workflow fails?</h3>
+    <p>One Google Sheets row and a ping to your ops Slack. Import tripwire-error.json, connect Sheets and Slack, and set it as the Error workflow on each pack you care about.</p>
+    <h3>What is the Tripwire heartbeat?</h3>
+    <p>tripwire-heartbeat.json. A silent death still shows up. Pair it with the error workflow so a pack that stops running is not invisible.</p>
+    <h3>How is Tripwire different from Fail Alert?</h3>
+    <p>Fail Alert ($19) is a Slack or Telegram ping with the execution URL. Tripwire ($29) also writes a Sheets log and includes a heartbeat. Neither pages clients or pays anyone.</p>
   </div>
   <section class="upsell">
     <h2>Just the Slack ping?</h2>

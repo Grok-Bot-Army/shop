@@ -82,8 +82,9 @@
       <li><a href="receipt-inbox.html">Receipt Inbox</a> ($39). Same Gmail-to-Sheets idea for receipts you already paid. Merchant, amount, date, plus the PDF in Drive.</li>
       <li><a href="lead-intake.html">Lead Intake</a> ($39). One POST webhook. Typeform, Tally, Fillout, or generic JSON becomes one Sheets lead row. Never emails the lead.</li>
       <li><a href="n8n-fail-alert.html">n8n Fail Alert</a> ($19). One Error Trigger workflow. A failed run posts once to Slack (Telegram optional) with the execution URL.</li>
+      <li><a href="tripwire.html">Tripwire</a> ($29). Failed workflows write one Sheets row and ping ops Slack. Heartbeat included. Never pages clients.</li>
     </ol>
-    <p>That is the Gmail to Sheets n8n stack. Import what you need. Set Fail Alert on each live workflow so a dead poll is not silent.</p>
+    <p>That is the Gmail to Sheets n8n stack. Import what you need. Set Fail Alert or Tripwire on each live workflow so a dead poll is not silent.</p>
 
     <h2>What each layer writes</h2>
     <table class="compare">
@@ -120,6 +121,12 @@
           <td>(Slack or Telegram)</td>
           <td>Spam or auto-retry loops</td>
         </tr>
+        <tr>
+          <td><a href="tripwire.html">Tripwire</a></td>
+          <td>Failed n8n execution</td>
+          <td>Sheets row plus Slack</td>
+          <td>Page clients, pay anyone</td>
+        </tr>
       </tbody>
     </table>
 
@@ -128,7 +135,7 @@
       <li>If vendor bills pile up in Gmail, start with Invoice Inbox.</li>
       <li>If SaaS receipts pile up in Gmail, add Receipt Inbox.</li>
       <li>If Typeform, Tally, or Fillout dump JSON, add Lead Intake.</li>
-      <li>When any of those is live, add Fail Alert to the Error workflow slot.</li>
+      <li>When any of those is live, add Fail Alert to the Error workflow slot. Want a Sheets log and a heartbeat? Use <a href="tripwire.html">Tripwire</a> instead.</li>
     </ol>
     <p>Want the never-pay rule on paper before you import? That is <a href="never-auto-pay.html">Never Auto-Pay</a> ($9), a checklist, not JSON. Picking one pack instead of a stack? See the <a href="n8n-gmail-sheets.html">invoice vs lead webhook comparison</a>.</p>
 
@@ -148,6 +155,7 @@
       <li><a href="receipt-inbox.html">Receipt Inbox <span class="hint">Gmail receipt PDFs to Sheets.</span></a></li>
       <li><a href="lead-intake.html">Lead Intake <span class="hint">Form webhook to one lead row.</span></a></li>
       <li><a href="n8n-fail-alert.html">n8n Fail Alert <span class="hint">One Slack ping when a run fails.</span></a></li>
+      <li><a href="tripwire.html">Tripwire <span class="hint">Sheets log, Slack ping, and a heartbeat.</span></a></li>
       <li><a href="n8n-gmail-sheets.html">Invoice vs webhook comparison</a></li>
       <li><a href="index.html">Shop home</a></li>
     </ul>

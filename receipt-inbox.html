@@ -16,6 +16,47 @@
 <meta name="twitter:image" content="https://grok-bot-army.github.io/shop/images/web/receipt.jpg">
 <link rel="canonical" href="https://grok-bot-army.github.io/shop/receipt-inbox.html">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Receipt Inbox pay anyone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It never talks to a bank, never pays anyone, and never emails the merchant. Receipts land in Sheets and Drive. Status is logged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Gmail receipt PDFs get into Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two n8n workflows poll Gmail for receipt PDFs, extract merchant, amount, and date with regex on the PDF text, append one Sheets row, and store the PDF in Drive. Below 70 confidence, status is needs_review and Slack gets a ping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Receipt Inbox different from Invoice Inbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Invoice Inbox logs bills you owe (vendor invoice PDFs). Receipt Inbox logs receipts you already paid. Both write Sheets. Neither pays anyone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Receipt Inbox for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Freelancers and tiny agencies who live in Gmail and Sheets, not expense software. If you already run Expensify or full receipt bookkeeping, skip this."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Receipt Inbox", "description": "n8n receipt workflow that polls Gmail for SaaS and vendor receipt PDFs and writes merchant, amount, and date to Google Sheets. Regex on the PDF. Never pays anyone.", "image": "https://grok-bot-army.github.io/shop/images/web/receipt.jpg", "brand": {"@type": "Brand", "name": "Wisernage"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "39", "availability": "https://schema.org/InStock", "url": "https://wisernage.gumroad.com/l/fshwnm?utm_source=shop&utm_medium=referral&utm_campaign=receipt_inbox_evergreen&utm_content=product_cta"}}</script>
 <body>
 <header class="site wrap">
@@ -36,7 +77,7 @@
   <div class="prose">
     <h2>Who it is for</h2>
     <p>Freelancers and tiny agencies who live in Gmail and Sheets, not expense software. <a href="invoice-inbox.html">Invoice Inbox</a> logs bills you owe. This logs receipts you bought.</p>
-    <p>Hard scans: <a href="invoice-ocr-prompt-pack.html">Invoice OCR Prompt Pack</a>. Silent failures: <a href="n8n-fail-alert.html">n8n Fail Alert</a>. Paper first: <a href="never-auto-pay.html">Never Auto-Pay</a>.</p>
+    <p>Hard scans: <a href="invoice-ocr-prompt-pack.html">Invoice OCR Prompt Pack</a>. Silent failures: <a href="n8n-fail-alert.html">n8n Fail Alert</a> or <a href="tripwire.html">Tripwire</a> (Sheets log plus heartbeat). Paper first: <a href="never-auto-pay.html">Never Auto-Pay</a>.</p>
     <h2>How to start</h2>
     <ol>
       <li>Buy the zip on Gumroad. You get two n8n workflows.</li>
@@ -48,6 +89,17 @@
     <h2>What you get</h2>
     <ul><li>Polls Gmail for receipt PDFs and writes merchant, amount, and date to Google Sheets.</li><li>Default extract is regex on PDF text. No LLM required to run.</li><li>Stores the PDF in Drive. Confidence under 70 writes needs_review and pings Slack.</li><li>Never talks to a bank, never pays anyone, never emails the merchant.</li></ul>
     <p class="note">If you already run Expensify or full receipt bookkeeping, skip this.</p>
+
+    <h2>Questions</h2>
+    <h3>Does Receipt Inbox pay anyone?</h3>
+    <p>No. It never talks to a bank, never pays anyone, and never emails the merchant. Receipts land in Sheets and Drive. Status is logged.</p>
+    <h3>How do Gmail receipt PDFs get into Google Sheets?</h3>
+    <p>Two n8n workflows poll Gmail for receipt PDFs, extract merchant, amount, and date with regex on the PDF text, append one Sheets row, and store the PDF in Drive. Below 70 confidence, status is needs_review and Slack gets a ping.</p>
+    <h3>How is Receipt Inbox different from Invoice Inbox?</h3>
+    <p>Invoice Inbox logs bills you owe (vendor invoice PDFs). Receipt Inbox logs receipts you already paid. Both write Sheets. Neither pays anyone.</p>
+    <h3>Who is Receipt Inbox for?</h3>
+    <p>Freelancers and tiny agencies who live in Gmail and Sheets, not expense software. If you already run Expensify or full receipt bookkeeping, skip this.</p>
+    <p>Want a Sheets log when the poll dies, not only a Slack ping? See <a href="tripwire.html">Tripwire</a>.</p>
   </div>
   <div class="actions"><a class="btn" href="https://wisernage.gumroad.com/l/fshwnm?utm_source=shop&utm_medium=referral&utm_campaign=receipt_inbox_evergreen&utm_content=product_cta_footer">Get Receipt Inbox · $39</a> <a class="btn ghost" href="index.html">All products</a></div>
 
@@ -57,6 +109,7 @@
       <li><a href="invoice-inbox.html">Invoice Inbox <span class="hint">Gmail invoice PDFs to Sheets. Never paid.</span></a></li>
       <li><a href="invoice-ocr-prompt-pack.html">Invoice OCR Prompt Pack <span class="hint">Strict JSON prompts for hard scans.</span></a></li>
       <li><a href="n8n-fail-alert.html">n8n Fail Alert <span class="hint">One Slack ping when a run fails.</span></a></li>
+      <li><a href="tripwire.html">Tripwire <span class="hint">Sheets log, Slack ping, and a heartbeat.</span></a></li>
       <li><a href="never-auto-pay.html">Never Auto-Pay <span class="hint">$9 checklist. Logged is not paid.</span></a></li>
       <li><a href="n8n-ops-stack.html">n8n Gmail to Sheets stack</a></li>
       <li><a href="index.html">Shop home</a></li>
